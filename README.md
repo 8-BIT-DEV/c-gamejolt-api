@@ -5,7 +5,7 @@
 * [HTTP GET LIBRARY](https://github.com/clibs/http-get.c)
 * [OPENSSL](https://github.com/openssl/openssl)
 
-# Helpfull
+# Helpful
 * [API DOCS](https://gamejolt.com/game-api/doc/libraries)
 
 # How to install / use in A project
