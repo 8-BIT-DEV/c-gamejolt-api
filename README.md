@@ -22,6 +22,8 @@
   
   int main()
   {
+      set_id("id here");
+      set_pkey("private key here");
       int ret = gj_login("username", "token"); // to auth a user accoun
       if(!ret) return -1;
       ret = gj_give_trophie(12321); // gives the trophie of that id
