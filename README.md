@@ -1,7 +1,6 @@
 # Gamejolt API library for C
 
 # Depends On
-* [JSMN](https://github.com/zserge/jsmn)
 * [HTTP GET LIBRARY](https://github.com/clibs/http-get.c)
 * [OPENSSL](https://github.com/openssl/openssl)
 
@@ -11,7 +10,6 @@
 # How to install / use in A project
 * Download and put gj.h and gj.c in your project
 * Download and put http-get.h and http-get.c in your project
-* Download JSMN and put it in your project
 * Link the crypto file from OPENSSL
 
 # Usage Guide
