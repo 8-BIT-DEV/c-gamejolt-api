@@ -22,15 +22,20 @@
   {
       set_id("id here");
       set_pkey("private key here");
-      int ret = gj_login("username", "token"); // to auth a user accoun
-      if(!ret) return -1;
-      ret = gj_give_trophie(12321); // gives the trophie of that id
-      if(!ret) return -1;
-      ret = gj_add_score(42321, 10000); // table id then score
-      if(!ret) return -1;
-      ret = gj_add_guest_score("cool_name", 342342, 900000); // guest name, table id, score
+      
+      // this checks if any of the 4 following api calls fails
+      int check = 4;
+      
+      gj_login("username", "token"); // to auth a user account
+      check -= gj_error();
+      gj_give_trophie(12321); // gives the trophie of that id
+      check -= gj_error();
+      gj_add_score(42321, 10000); // table id then score
+      check -= gj_error();
+      gj_add_guest_score("cool_name", 342342, 900000); // guest name, table id, score
+      check -= gj_error();
       // for more look at the api docs and header file for rest of functions
-      if(!ret) return -1;
-      return ret;
+      if(check != 0) return check;
+      return 0;
   }
 ```
